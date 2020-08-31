@@ -23,7 +23,7 @@ nav_keys.forEach((elem, idx) => {
 // print(filtered);
 // print(filtered2);
 
-const nav = document.querySelector('nav');
+const nav = document.querySelector('header > nav');
 filtered.forEach((elem, idx) => {
 
     const new_elem = document.createElement('a');
