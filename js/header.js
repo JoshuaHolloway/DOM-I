@@ -1,4 +1,4 @@
-console.log('Hello from JOSH-2');
+console.log('Hello from header.js');
 
 const nav_elems = siteContent.nav;
 const nav_keys = keys(nav_elems);
