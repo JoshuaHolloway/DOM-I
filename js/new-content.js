@@ -5,15 +5,16 @@ as.forEach((elem) => elem.style.color = 'green');
 
 // * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 
-const new_elem = document.createElement('h2');
-new_elem.textContent = 'Hello from new-content.js!';
-const container = qs('.container');
-container.prepend(new_elem);
+const new_elem1 = document.createElement('a');
+new_elem1.textContent = 'josh-1';
+const nav = qs('nav');
+nav.prepend(new_elem1);
 
-const new_elem2 = document.createElement('h1');
-new_elem2.textContent = 'Hello from new-content.js!';
-const nav = qs('.nav');
-container.appendChild(new_elem2);
+
+const new_elem2 = document.createElement('a');
+new_elem2.textContent = 'josh-2';
+const nav1 = qs('nav');
+nav1.append(new_elem2);
 
 
 
