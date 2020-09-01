@@ -43,3 +43,9 @@ function begin_timer() {
     
     }, delay);
 }
+
+// * SG1: Implement a start button. The digital timer should not start until the button is pressed.
+const button = qs('button');
+button.addEventListener('click', () => {
+begin_timer();
+});
