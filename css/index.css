@@ -297,3 +297,15 @@ footer {
         margin: 20px;
     }
 }
+
+
+._button_ {
+    height: 500px;
+    width:  500px;
+    background: blue;
+    color: white;
+}
+
+._red_ {
+    background: red;
+}
