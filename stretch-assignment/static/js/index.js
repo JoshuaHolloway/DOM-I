@@ -8,7 +8,7 @@ class Timer {
     add_count() {
         ++this.count;
         this.seconds = this.count % 60;
-        this.minutes = this.count / 60;
+        this.minutes = Math.floor(this.count / 60);
     }
 
     get_seconds() { return this.seconds; }
@@ -31,7 +31,7 @@ setInterval(() => {
     };
 
     seconds.textContent = pad(timer.get_seconds(), 2);
-    // minutes.textContent = timer.get_minutes();
+    minutes.textContent = pad(timer.get_minutes(), 2);
 
     timer.add_count();
 
