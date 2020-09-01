@@ -29,7 +29,7 @@ class Timer {
 const timer = new Timer();
 
 function begin_timer() {
-    const delay = 1e-3; // 1ms.
+    const delay = 1; // 1ms.
     setInterval(() => {
         const seconds = qs('#seconds');
         const minutes = qs('#minutes');
