@@ -9,4 +9,3 @@ const ps = document.querySelectorAll('.contact > p');
 ps[0].textContent = siteContent.contact.address;
 ps[1].textContent = siteContent.contact.phone;
 ps[2].textContent = siteContent.contact.email;
-
