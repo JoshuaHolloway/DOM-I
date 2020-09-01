@@ -8,11 +8,29 @@
   </head>
   <body>
     <div class="digits">
-      <div class="digit" id="hours">-</div>
+      <div class="digit" id="hours">00</div>
       <div class="digit" id="colon">:</div>
-      <div class="digit" id="minutes">-</div>
+      <div class="digit" id="minutes">00</div>
       <div class="digit" id="colon">:</div>
-      <div class="digit" id="seconds">-</div>
+      <div class="digit" id="seconds">00</div>
     </div>
+
+    <button><h1>Start</h1></button>
+    <style>
+      button {
+        height: 100px;
+        width: 100px;
+        background: red;
+      }
+    </style>
+
+    <script>
+      const button = qs('button');
+      button.addEventListener('click', () => {
+        begin_timer();
+      });
+
+    </script>
+
   </body>
 </html>

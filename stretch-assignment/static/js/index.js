@@ -28,16 +28,18 @@ class Timer {
 
 const timer = new Timer();
 
-const delay = 1e-3; // 1ms.
-setInterval(() => {
-    const seconds = qs('#seconds');
-    const minutes = qs('#minutes');
-    const hours = qs('#hours');
-
-    seconds.textContent = timer.get_seconds();
-    minutes.textContent = timer.get_minutes();
-    hours.textContent =   timer.get_hours();
-
-    timer.add_count();
-
-}, delay);
+function begin_timer() {
+    const delay = 1e-3; // 1ms.
+    setInterval(() => {
+        const seconds = qs('#seconds');
+        const minutes = qs('#minutes');
+        const hours = qs('#hours');
+    
+        seconds.textContent = timer.get_seconds();
+        minutes.textContent = timer.get_minutes();
+        hours.textContent =   timer.get_hours();
+    
+        timer.add_count();
+    
+    }, delay);
+}
