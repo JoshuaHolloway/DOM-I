@@ -1,13 +1,17 @@
 class Timer {
 
     constructor() {
-        this.seconds = 0;
-        this.minutes = 0;
+        this.count = 0;
     }
-    get_seconds() { return this.seconds.toString(); }
-    get_minutes() { return this.minutes.toString(); }
-    add_second(){ ++this.seconds; }
-    add_minute(){ ++this.minutes; }
+    add_second() {
+        this.count++;
+    }
+    second_ones() { 
+        return this.count % 10;
+    }
+    second_tens() {
+        return this.cont % 60;
+    }
 }
 
 const timer = new Timer();
@@ -19,7 +23,7 @@ setInterval(() => {
 
     const second_tens = qs('#secondTens');
 
-    second_tens.textContent = timer.get_seconds();
+    second_tens.textContent = timer.second_ones();
     timer.add_second();
 
 
