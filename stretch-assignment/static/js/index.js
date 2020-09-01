@@ -2,39 +2,37 @@ class Timer {
 
     constructor() {
         this.count = 0;
-        this.second_ones = 0;
-        this.second_tens = 0;
+        this.seconds = 0;
+        this.minutes = 0;
     }
-    add_second() {
+    add_count() {
         ++this.count;
+        this.seconds = this.count % 60;
+        this.minutes = this.count / 60;
+    }
 
-        this.second_ones = this.count % 10;
-        if (this.second_ones === 0) ++this.second_tens % 10;
-
-    }
-    get_second_ones() { 
-        return this.second_ones;
-    }
-    get_second_tens() { 
-        return this.second_tens;
-    }
+    get_seconds() { return this.seconds; }
+    get_minutes() { return this.minutes; }
 }
 
 const timer = new Timer();
 
-const delay = 1e3;
+const delay = .1e3;
 setInterval(() => {
     const body = qs('body');
-    body.classList.toggle('_red_');
 
-    const second_tens = qs('#secondTens');
-    const second_ones = qs('#secondOnes');
+    const seconds = qs('#seconds');
+    const minutes = qs('#minutes');
 
-    second_ones.textContent = timer.get_second_ones();
-    second_tens.textContent = timer.get_second_tens();
+    
+    const pad = (num, zeros) => {
+        // String(<number>).padStart(<places>, '0')
+        return String(num.toString()).padStart(zeros, '0')
+    };
 
+    seconds.textContent = pad(timer.get_seconds(), 2);
+    // minutes.textContent = timer.get_minutes();
 
-    timer.add_second();
-
+    timer.add_count();
 
 }, delay);
