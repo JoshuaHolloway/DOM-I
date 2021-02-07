@@ -11,4 +11,10 @@ container.appendChild(button);
 button.addEventListener('click', (event) => {
     const body = qs('body');
     body.classList.toggle('_red_');
+
+    const contains_red_class = body.classList.contains('_red_');
+    if (contains_red_class)
+      button.innerText = 'text content changed';
+    else
+      button.innerText = 'Josh';
 });
