@@ -1,12 +1,12 @@
-_.print('cta.js');
+// _.print('cta.js');
 
 const cta_section = document.querySelector('.cta');
 const h1 = cta_section.querySelector('.cta-text > h1');
 
 const cta_data = siteContent.cta;
-_.print(cta_data);
+// _.print(cta_data);
 const h1_data = cta_data.h1.split(' ');
-_.print(h1_data);
+// _.print(h1_data);
 
 // .cta > .cta-text > h1
 const h1_str = `${h1_data[0]} <br> ${h1_data[1]}<br> ${h1_data[2]}`;

@@ -1,8 +1,7 @@
 const text_contents = Array.from(document.querySelectorAll('.main-content > .bottom-content > .text-content'));
-print(text_contents);
+_.print(text_contents);
 
 text_contents.forEach((elem, idx) => {
-
 
     // Services
     // Products
@@ -22,7 +21,7 @@ text_contents.forEach((elem, idx) => {
             break;
         }
         default: {
-            print('ERROR - program is not this robust!!!');
+            _.Arrayprint('ERROR - program is not this robust!!!');
         }
     }
 
