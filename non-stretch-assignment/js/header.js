@@ -20,8 +20,8 @@ nav_keys.forEach((elem, idx) => {
     else
         filtered2.push(nav_vals[idx]); // all else
 });
-// print(filtered);
-// print(filtered2);
+_.print(filtered, 'filtered: ');
+_.print(filtered2, 'filtered2: ');
 
 const nav = document.querySelector('header > nav');
 filtered.forEach((elem, idx) => {
@@ -32,10 +32,9 @@ filtered.forEach((elem, idx) => {
     
     nav.appendChild(new_elem);
 });
-print(nav);
 
-
+_.print(nav);
 
 const img = document.querySelector('header > img');
-img.setAttribute('src', filtered2[0]);
-print(img);
+img.setAttribute('src', `./${filtered2[0]}`);
+_.print(img);
