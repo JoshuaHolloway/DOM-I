@@ -14,16 +14,9 @@ import filter from './filter/filter.js';
 const filtered = filter(nav_keys, siteContent);
 _.print(filtered, 'concise & modular filter: ');
 
+const as = document.querySelectorAll('header > nav > a');
+filtered.forEach((elem, idx) => as[idx].textContent = elem);
 // const nav = document.querySelector('header > nav');
-// console.log(nav);
-// filtered.forEach((elem, idx) => {
-
-//     const new_elem = document.createElement('a');
-//     new_elem.textContent = elem;
-//     new_elem.setAttribute('href', '#');
-    
-//     nav.appendChild(new_elem);
-// });
 // _.print(nav);
 
 // const img = document.querySelector('header > img');
