@@ -1,5 +1,3 @@
-# (Josh)
-
 # DOM I - JavaScript Content Management System
 
 ## Project Description
@@ -19,7 +17,6 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 **Follow these steps to set up and work on your project:**
 
 * [ ] Create a forked copy of this project.
-* [ ] Add your project manager as collaborator on Github.
 * [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
 * [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 * [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
@@ -44,13 +41,7 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
 * [ ] Check your work by looking at the [original html](original.html) in the browser
 
-### Task 2b: Exit Ticket
-
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/wDZyexzhgBwvRbtMb/zghxQdQtGENfLc).
-
-The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
-
-### Task 3: Stretch 
+### Task 3: Stretch
 
 * [ ] Update styles throughout the page as you see fit. Study what happens when you updated the DOM using style in JavaScript.  
 * [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
@@ -64,5 +55,3 @@ This project is heavier on logic but employs some DOM manipulation to achieve it
 **Follow these steps for completing your project.**
 
 * [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
-* [ ] Add your project manager as a reviewer on the pull-request
-* [ ] Your project manager will count the project as complete by merging the branch back into `main` branch.
