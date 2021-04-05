@@ -35,6 +35,6 @@ const filt_vals = filt_keys.map((key) => siteContent.nav[key]);
 _.print(filt_vals, 'filt_vals: ');
 
 // Redo concicely:
-const filter = (keys) => keys.filter(x => x.match(/nav-item-./g) !== null);
+const filter = (keys) => keys.filter(x => x.match(/nav-item-./g) !== null).map((key) => siteContent.nav[key]);
 const filt = filter(nav_keys);
 _.print(filt, '(concisely) filt: ');
