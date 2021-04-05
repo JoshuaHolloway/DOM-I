@@ -1,27 +1,3 @@
-# DOM I - JavaScript Content Management System
-
-## Project Description
-
-You are going to be emulating a content management system by controlling the content in the JavaScript file instead of the HTML file. This project is an exercise pointed at selecting elements and then updating them without touching the HTML file using the DOM.
-
-Compare `index.html` against `original.html` and notice how `index.html` is lacking text content and other things. The goal is to make the page look the same as `original.html` using JavaScript.
-
-You have been provided a [JSON object](js/index.js) with all the necessary data to accomplish this task.  Use dot or bracket notation to traverse the data provided.
-
-**ONE RULE: You cannot update the HTML or CSS files directly.  You must use JavaScript and the DOM only for your tasks today.**
-
-## Instructions
-
-### Task 1: Set Up The Project With Git
-
-**Follow these steps to set up and work on your project:**
-
-* [ ] Create a forked copy of this project.
-* [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
-
 ### Task 2a: MVP
 
 #### Create selectors to point your data into elements
@@ -49,9 +25,3 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 #### Stretch Project: Digital Timer
 
 This project is heavier on logic but employs some DOM manipulation to achieve its goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get.
-
-## Submission Format
-
-**Follow these steps for completing your project.**
-
-* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
