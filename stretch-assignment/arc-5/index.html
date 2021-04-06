@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dev | arc</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <svg>
+    <path 
+      d="
+      M 100 0 
+      A 100 100 0 0 0 100 0" 
+      fill="none" 
+      stroke="black" 
+      stroke-width="10" 
+      style="stroke-linecap: round"/>
+  </svg>
+
+  <div class="slidecontainer">
+    
+    <div class="container">
+      <input class="slider-theta" type="range" min="0" max="360" value="90">
+      <p><strong>Theta:</strong><span class="display-slider-val"></span></p>
+    </div>
+
+    <div class="container">
+      <input class="slider-origin-x" type="range" min="0" max="400" value="200">
+      <p> <strong>Origin-x: </strong><span class="display-origin-x"></span></p>  
+    </div>
+
+    <div class="container">
+      <input class="slider-origin-y" type="range" min="0" max="400" value="200">
+      <p> <strong>Origin-y: </strong><span class="display-origin-y"></span></p>  
+    </div>
+    <style>
+      .container {
+        border: solid hotpink 5px;
+      }
+    </style>
+    
+  </div>
+
+  <script>
+    const deg2rad = (deg) => deg * (Math.PI / 180);
+    const rad2deg = (rad) => rad * (180 / Math.PI);
+
+    let svg = document.querySelector('svg');
+    var W = svg.getClientRects();
+    var H = svg.getClientRects().height;
+    console.dir('svg');
+    // console.log(`(W, H): (${W}, ${H})`);
+    console.log(W);
+
+    const [x0, y0] = [100, 0];
+
+    const PI = Math.PI;
+    const cos = Math.cos;
+    const sin = Math.sin;
+    const path = document.querySelector('path');
+    console.log(path);
+
+    let theta = 0;
+    const f = (event) => {
+
+      console.log(event.target.value);
+      const slider_val = event.target.value;
+      const display_slider_val = document.querySelector('.display-slider-val');
+      const display_theta = document.querySelector('.display-theta');
+      display_slider_val.textContent = slider_val;
+
+      const r = 100;
+      const x = r * cos(theta);
+      const y = r * sin(theta);
+
+
+      if (theta <= deg2rad(180)) {
+        path.setAttribute('d', `
+          M ${x0} ${y0} 
+          A ${r} ${r} 0 0 1 ${x} ${y}`);
+      } else if (theta === 0) {
+
+        path.setAttribute('d', `
+          M 100 0 
+          A 100 100 0                0               0          ${x} ${y}`);
+        //A rx  ry  x-axis-rotation  large-arc-flag  sweep-flag   x    y
+      
+      } else {
+        path.setAttribute('d', `
+          M ${x0} ${y0} 
+          A 100 100 0 1 1 ${x} ${y}`);
+      }
+
+      theta = deg2rad(slider_val);
+      console.log(`theta: ${theta}`);
+      display_theta.textContent = theta;
+    };
+    // f();
+
+    const slider = document.querySelector('.slider-theta');
+    slider.addEventListener('input', f);
+
+
+
+
+  </script>
+</body>
+</html>

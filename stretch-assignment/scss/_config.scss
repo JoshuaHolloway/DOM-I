@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+:root {
+  --background-alarm-1: #F87070;
+  --background-alarm-2: #70F3F8;
+  --background-alarm-3: #D881F8;
+}
+
+$background-primary: #1E2140;
+$background-secondary: #161932;
+$text-primary: #D7E0FF;
+$text-secondary: #161932;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: $text-primary;
+}
